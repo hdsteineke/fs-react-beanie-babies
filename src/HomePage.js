@@ -25,8 +25,8 @@ export default function HomePage() {
   return (
     <div className='pokemon-list'>
       <header><h1>Whos that Pokemon?</h1>
-        <button onClick={e => setPage(page - 1)}>Previous Page</button>
-        <button onClick={e => setPage(page + 1)}>Next Page</button>
+        <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous Page</button>
+        <button onClick={() => setPage(page + 1)} disabled={pokemons.length < perPage}>Next Page</button>
       </header>
       {pokemons.map((pokemon, i) => 
         <Pokemon key={`${pokemon.name}-${i}`} {...pokemon} />)
