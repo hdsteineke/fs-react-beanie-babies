@@ -19,7 +19,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>HomePage
+    <div className='pokemon-list'>
+      <header><h1>Whos that Pokemon?</h1></header>
       {pokemons.map((pokemon, i) => 
         <Pokemon key={`${pokemon.name}-${i}`} {...pokemon} />)
       }

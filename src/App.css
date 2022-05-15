@@ -41,3 +41,14 @@
   border: groove;
   width: 200px;
 }
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
