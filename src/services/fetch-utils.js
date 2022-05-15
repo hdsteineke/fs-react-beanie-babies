@@ -1,9 +1,10 @@
 import { client } from './client';
 
-export async function catchEmAll() {
+export async function catchEmAll(from, to) {
   const response = await client
     .from('pokemon')
-    .select('*');
+    .select('*')
+    .range(from, to);
 
   return response.body;
 
