@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Pokemon({ Name, Type_1, HP, Attack }) {
+export default function Pokemon({ name, hp, attack }) {
   return (
-    <div className='pokemon'>Pokemon
-      <p>{Name}</p>
-      <p>{HP}</p>
-      <p>{Type_1}</p>
-      <p>{Attack}</p>
-    </div>
+    <Link to={`/pokemon/${name}`}>
+      <div className='pokemon'>
+        <h3>{name}</h3>
+        <p>HP: {hp}</p>
+        <p>Attack: {attack}</p>
+      </div>
+    </Link>
   );
 }
